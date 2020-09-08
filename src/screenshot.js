@@ -7,7 +7,7 @@ async function capture(browserInstance, url) {
         await page.goto(url, {waitUntil: "networkidle0", timeout: 60000});
         await page.setViewport({width: 1600, height: 900});
         await page.screenshot({
-            path: "./output/screenshot.jpg",
+            path: `./output/screenshot${new Date()}.jpg`,
             type: "jpeg",
             fullPage: true
         });
